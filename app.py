@@ -1,3 +1,7 @@
+import hashlib
+
+def sha256_hex(s: str) -> str:
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
 from datetime import datetime, timezone
 from flask import Flask, request, jsonify
